@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app">加载中</div>
+  <script>
+    window.$docsify = {
+      name: '这里不是标题' + '<br>' + '想要创造传奇',
+      repo: '',
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+
+      search: 'auto', // default
+      search : [
+        '/',            // => /README.md
+        '/guide',       // => /guide.md
+        '/get-started', // => /get-started.md
+        '/zh-cn/',      // => /zh-cn/README.md
+      ],
+
+      // complete configuration parameters
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: [], // or 'auto'
+        placeholder: '搜索',
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': '想看可以点我搜一下哦'
+        },
+        noData: '找不到结果',
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': '找不到结果'
+        },
+        depth: 2,
+        hideOtherSidebarContent: false,
+        namespace: 'website-1',
+        pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+        pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+      }
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
